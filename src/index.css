@@ -1,0 +1,19 @@
+body {
+    background-color: #655e5e;
+}
+
+section .card-footer {
+    position: relative;
+}
+
+section .card-footer a[data-title]:hover::after {
+    background-color: rgb(238 227 232);
+    border-radius: 25px;
+    color: #000;
+    content: attr(data-title);
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    padding: 0.5rem;
+    text-align: center;
+}
