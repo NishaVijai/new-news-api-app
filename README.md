@@ -1,8 +1,9 @@
-# React + Vite
+# News App
+## Vite React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Preview link
+- new-news-api-app.netlify.app/
 
-Currently, two official plugins are available:
+## Screenshot
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![NewsApp](https://github.com/NishaVijai/new-news-api-app/assets/26595961/d9d5deb5-1401-47e2-9172-5014e3fa09b6)
