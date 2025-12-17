@@ -6,10 +6,10 @@ const App = () => {
   const [category, setCategory] = useState("general");
 
   return (
-    <section>
+    <>
       <NavBar setCategory={setCategory} />
       <NewsBoard category={category} />
-    </section>
+    </>
   );
 };
 

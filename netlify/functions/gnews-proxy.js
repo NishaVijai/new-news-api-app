@@ -1,7 +1,7 @@
 
 // IMPORTANT: Set VITE_NEWS_API_KEY in your Netlify dashboard (Site settings > Environment variables)
 
-exports.handler = async function (event) {
+export async function handler(event) {
   const { category = '', lang = 'en', country = 'us', max = 10 } = event.queryStringParameters;
   const apiKey = process.env.VITE_NEWS_API_KEY;
   const url = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=${lang}&country=${country}&max=${max}&apikey=${apiKey}`;
@@ -23,5 +23,5 @@ exports.handler = async function (event) {
       body: JSON.stringify({ error: error.message }),
     };
   }
-};
+}
 /* eslint-env node */

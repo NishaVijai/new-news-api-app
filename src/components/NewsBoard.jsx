@@ -19,7 +19,7 @@ const NewsBoard = ({ category }) => {
   }, [category]);
 
   return (
-    <section className='container-fluid mb-5 mt-3'>
+    <main className='container-fluid mb-5 mt-3'>
       <h2 className="text-center text-light fs-3">
         Latest <span className="badge text-bg-danger fs-4">News</span>
       </h2>
@@ -36,7 +36,7 @@ const NewsBoard = ({ category }) => {
           );
         }) : <p className="text-warning">Loading...</p>}
       </section>
-    </section>
+    </main>
   );
 };
 
