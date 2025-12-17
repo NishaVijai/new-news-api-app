@@ -2,13 +2,13 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from 'react';
 import NewsItem from './NewsItem';
 
-const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY;
+
 
 const NewsBoard = ({ category }) => {
   const [articles, setArticles] = useState([]);
 
   const fetchData = async () => {
-    let url = `https://gnews.io/api/v4/top-headlines?category=&category=${category}&lang=en&country=us&max=10&apikey=${NEWS_API_KEY}`;
+    let url = `/.netlify/functions/gnews-proxy?category=${category}&lang=en&country=us&max=10`;
     const res = await fetch(url);
     const data = await res.json();
     return setArticles(data.articles);
