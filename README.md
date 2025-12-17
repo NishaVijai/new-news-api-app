@@ -2,7 +2,7 @@
 ## Vite React Project
 
 ## Preview link
-- https://new-news-api-app.netlify.app
+- https://news-app-reactjs-project.netlify.app/
 
 ## Screenshot
 
