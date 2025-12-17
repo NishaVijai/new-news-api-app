@@ -5,5 +5,4 @@
 - https://news-app-reactjs-project.netlify.app/
 
 ## Screenshot
-
-![NewsApp](https://github.com/NishaVijai/new-news-api-app/assets/26595961/d9d5deb5-1401-47e2-9172-5014e3fa09b6)
+<img width="3840" height="1960" alt="News App" src="https://github.com/user-attachments/assets/4e7c539e-f85c-4b71-8674-2f714b713068" />
