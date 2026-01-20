@@ -32,7 +32,7 @@ The app uses **Netlify Functions** as a proxy to keep your **API key secure**, s
 
 ---
 
-## Preview link
+## Preview
 - https://news-app-reactjs-project.netlify.app/
 
 ---
@@ -106,7 +106,7 @@ netlify dev
 ```
 
 * Runs the Vite frontend on `http://localhost:8888`
-* Runs the Netlify Functions proxy on `http://localhost:8888/.netlify/functions/getNews`
+* Runs the Netlify Functions proxy on `http://localhost:8888/.netlify/functions/gnews-proxy`
 
 Now, the app fetches news securely through the proxy instead of exposing your API key.
 
