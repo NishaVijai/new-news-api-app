@@ -38,7 +38,7 @@ The app uses **Netlify Functions** as a proxy to keep your **API key secure**, s
 ---
 
 ## Screenshot
-<img width="3840" height="1960" alt="News App" src="https://github.com/user-attachments/assets/4e7c539e-f85c-4b71-8674-2f714b713068" />
+<img width="3840" height="2046" alt="News App" src="https://github.com/user-attachments/assets/0c86be75-4b59-4eeb-a1ba-c449eb5460d9" />
 
 ---
 
