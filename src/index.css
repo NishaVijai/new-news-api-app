@@ -139,6 +139,8 @@ body {
 .btn,
 .nav-link,
 .card-footer a {
+  border: 2px solid transparent;
+  border-radius: 8px;
   transition: all 0.2s ease;
 }
 
@@ -146,12 +148,14 @@ body {
 .btn:focus-visible,
 .nav-link:focus-visible,
 .card-footer a:focus-visible {
-  outline: 3px solid #ffc107;
-  outline-offset: 2px;
+  border: 2px solid #ffc107;
+  /* outline: 2px solid #ffc107;
+  outline-offset: 2px; */
 }
 
 /* Prevent underline on hover for card footer links */
 .card-footer a:hover {
+  border-color: var(--pleasant-green);
   text-decoration: none;
 }
 
