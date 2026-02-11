@@ -1,28 +1,187 @@
-/* Ensure #root fills the entire device screen height */
+/* =====================================
+   ROOT & GLOBAL LAYOUT
+===================================== */
+
 #root {
-    min-height: 100vh;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
 body {
-    background-color: #655e5e;
-    min-height: 100vh;
-    margin: 0;
+  background-color: #655e5e;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: system-ui, sans-serif;
 }
 
-section .card-footer {
-    position: relative;
+/* =====================================
+   CENTERED CONTENT CONTAINER
+===================================== */
+
+.news-container {
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-section .card-footer a[data-title]:hover::after {
-    background-color: rgb(238 227 232);
-    border-radius: 25px;
-    color: #000;
-    content: attr(data-title);
-    position: absolute;
-    bottom: 50px;
-    left: 0px;
-    padding: 0.5rem;
-    text-align: center;
+@media (min-width: 1400px) {
+  .news-container {
+    width: 90%;
+  }
+}
+
+/* Limit navbar content width */
+.navbar .container {
+  max-width: 1400px;
+}
+
+/* =====================================
+   CARD STYLING
+===================================== */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* News image */
+.card-img-top,
+.news-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .card-img-top,
+  .news-img {
+    height: 150px;
+  }
+}
+
+/* =====================================
+   NAVBAR STYLING
+===================================== */
+
+/* Set up pleasant green color for hover/focus states */
+:root {
+  --pleasant-green: #4caf50;
+}
+
+/* Navbar link default styling */
+.navbar .nav-link {
+  border: 2px solid transparent; /* Keeps the 2px space for borders */
+  border-radius: 8px;
+  padding: 0.5rem 1rem; /* Ensure the padding remains uniform */
+  transition: all 0.2s ease;
+  box-sizing: border-box; /* Prevent layout shifting */
+}
+
+/* Apply hover/focus states only for non-active links */
+.navbar .nav-link:not(.nav-active):hover {
+  background-color: rgba(255, 255, 255, 0.1); /* subtle hover bg */
+  border-color: var(--pleasant-green); /* Green border for hover */
+}
+
+/* Active category link */
+.nav-active {
+  background-color: #ffc107; /* Yellow background */
+  color: #000 !important;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 2px solid #ffc107; /* Single border on active state */
+  box-sizing: border-box;
+}
+
+/* Remove any hover/focus border for "Top News" active button */
+.navbar .nav-link.nav-active .badge {
+  background-color: #ffc107; /* Keep yellow background for active badge */
+  border: 2px solid #ffc107; /* Same yellow border */
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+
+/* Ensure "Top News" button does not shift when hovered */
+.navbar .nav-link span.badge {
+  padding-left: 1rem; /* Adjust padding if needed */
+  padding-right: 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+/* Hover/focus state for the "Top News" badge */
+.navbar .nav-link span.badge:hover {
+  border: none; /* Remove border on hover/focus for badge */
+  cursor: pointer;
+}
+
+/* Remove border from "Top News" button when active */
+.navbar .nav-link .badge.fs-5.bg-warning {
+  border: none; /* Prevent double borders */
+}
+
+/* =====================================
+   BUTTONS & ACCESSIBILITY
+===================================== */
+
+.btn,
+.nav-link,
+.card-footer a {
+  transition: all 0.2s ease;
+}
+
+/* Keyboard focus (accessible & modern) */
+.btn:focus-visible,
+.nav-link:focus-visible,
+.card-footer a:focus-visible {
+  outline: 3px solid #ffc107;
+  outline-offset: 2px;
+}
+
+/* Prevent underline on hover for card footer links */
+.card-footer a:hover {
+  text-decoration: none;
+}
+
+/* =====================================
+   TOOLTIP (Card Footer)
+===================================== */
+
+.card-footer {
+  position: relative;
+}
+
+.card-footer a[data-title]:hover::after,
+.card-footer a[data-title]:focus::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  padding: 0.5rem 0.75rem;
+  background-color: rgb(238, 227, 232);
+  border-radius: 25px;
+  color: #000;
+  white-space: nowrap;
+  z-index: 10;
+  font-size: 0.85rem;
+}
+
+/* =====================================
+   MISC. STYLES
+===================================== */
+
+.background-pleasant-green {
+  background-color: var(--pleasant-green);
 }
